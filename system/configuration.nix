@@ -52,6 +52,9 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+# --- SHELL ---
+  programs.zsh.enable = true;
+
 # --- GRAPHICS ---
 
   # WM
