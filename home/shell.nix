@@ -1,0 +1,25 @@
+{ pkgs, ... }:
+
+{
+  imports = [
+    ./aliases.nix # Подключаем твои алиасы
+  ];
+
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ "git" "sudo" ];
+    };
+
+    initExtra = ''
+      zstyle ':completion:*' menu select
+    '';
+  };
+
+  programs.starship.enable = true;
+}
