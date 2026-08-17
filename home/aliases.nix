@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  environment.shellAliases = {
+  home.shellAliases = {
     # --- NIX ---
     nix-conf = "zeditor ~/.config/nixos/configuration.nix";
     flake-conf = "zeditor ~/.config/nixos/flake.nix";
