@@ -28,9 +28,6 @@
     };
   };
 
-  # idk it's was proxy but my laptop erased this file partly
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
   # Enable networking
   networking.networkmanager.enable = true;
 
