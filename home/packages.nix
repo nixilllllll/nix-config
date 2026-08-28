@@ -42,5 +42,6 @@
     # --- MISC ---
     bibata-cursors
     papirus-icon-theme
+    gruvbox-plus-icons
   ];
 }
