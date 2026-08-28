@@ -1,7 +1,6 @@
 { pkgs, ... }:
 
 {
-  # --- BOOTLOADER ---
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.loader.grub = {
@@ -16,7 +15,6 @@
     theme = "bgrt";
   };
 
-  # Параметры ядра для тихой загрузки
   boot.kernelParams = [
     "quiet"
     "splash"
