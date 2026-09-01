@@ -16,17 +16,10 @@
 # --- NIX FEATURES ---
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # --- DISPLAY MANAGER ---
-  programs.noctalia-greeter = {
-    enable = true;
-    settings = {
-      cursor = {
-        theme = "Bibata-Modern-Ice";
-        size = 24;
-        path = "${pkgs.bibata-cursors}/share/icons";
-      };
-    };
-  };
+# --- DISPLAY MANAGER ---
+  services.xserver.enable = true;
+  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -49,13 +42,20 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-# --- SHELL ---
+# --- COMMAND SHELL ---
   programs.zsh.enable = true;
 
 # --- GRAPHICS ---
 
-  # WM
+  # Desktop Portals (WIP)
+  xdg.portal = {
+    enable = true;
+    extraPortals = [pkgs.kdePackages.xdg-desktop-portal-kde ];
+  };
+
+  #
   programs.niri.enable = true;
+  services.desktopManager.plasma6.enable = true;
 
 # --- USERS ---
 
@@ -63,7 +63,7 @@
   users.users."xbscure" = {
     isNormalUser = true;
     description = "xbscure";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel"];
     packages = with pkgs; [];
     shell = pkgs.zsh;
   };

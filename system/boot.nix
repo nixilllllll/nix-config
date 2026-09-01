@@ -16,6 +16,8 @@
   };
 
   boot.kernelParams = [
+    "nvidia-drm.modeset=1"
+    "nvidia-drm.fbdev=1"
     "quiet"
     "splash"
     "boot.shell_on_fail"
