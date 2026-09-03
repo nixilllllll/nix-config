@@ -4,6 +4,7 @@
   imports = [
     ./packages.nix
     ./shell.nix
+    ./dev.nix
   ];
 
   home.username = "xbscure";
