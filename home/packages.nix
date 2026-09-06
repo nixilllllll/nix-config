@@ -29,11 +29,12 @@
 
     # --- GUI APPS ---
     pkgs-unstable.noctalia
-    pkgs-unstable.flclash
+    pkgs-unstable.clash-verge-rev
     pkgs-unstable.firefox
     pkgs-unstable.telegram-desktop
     pkgs-unstable.spotify
 
+    flclash
     alacritty
     ghostty
     xwayland-satellite
