@@ -16,7 +16,7 @@
       plugins = [ "git" "sudo" ];
     };
 
-    initExtra = ''
+    initContent = ''
       zstyle ':completion:*' menu select
     '';
   };
