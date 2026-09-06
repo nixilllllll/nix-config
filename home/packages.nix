@@ -29,18 +29,18 @@
 
     # --- GUI APPS ---
     pkgs-unstable.noctalia
-    flclash
+    pkgs-unstable.flclash
+    pkgs-unstable.firefox
+    pkgs-unstable.telegram-desktop
+    pkgs-unstable.spotify
+
     alacritty
     ghostty
     xwayland-satellite
     fuzzel
     nautilus
     zed-editor
-    firefox
-    sioyek
     obsidian
-    telegram-desktop
-    spotify
 
     # --- MISC ---
     bibata-cursors
