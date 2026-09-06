@@ -13,9 +13,11 @@
     brightnessctl
     vim
     neovim
+    helix
     wget
     curl
     git
+    lazygit
     zellij
     bat
     eza
@@ -29,6 +31,7 @@
     pkgs-unstable.noctalia
     flclash
     alacritty
+    ghostty
     xwayland-satellite
     fuzzel
     nautilus
