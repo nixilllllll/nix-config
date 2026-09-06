@@ -5,7 +5,7 @@
     # --- NIX ---
     nix-conf = "zeditor ~/.config/nixos/system/configuration.nix";
     flake-conf = "zeditor ~/.config/nixos/flake.nix";
-    nix-update = "sudo nixos-rebuild switch --flake ~/.config/nixos/#nixos";
+    nix-update = "nixos-rebuild switch --flake ~/.config/nixos/#nixos";
 
     # --- SH ---
     alias-conf = "zeditor ~/.config/nixos/home/aliases.nix";
