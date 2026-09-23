@@ -31,6 +31,7 @@
     pkgs-unstable.noctalia
     pkgs-unstable.clash-verge-rev
     pkgs-unstable.firefox
+    pkgs-unstable.chromium
     pkgs-unstable.telegram-desktop
     pkgs-unstable.spotify
 
