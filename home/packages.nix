@@ -43,6 +43,7 @@
     nautilus
     zed-editor
     obsidian
+    onlyoffice-desktopeditors
 
     # --- MISC ---
     bibata-cursors
