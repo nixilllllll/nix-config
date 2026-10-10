@@ -26,6 +26,7 @@
     cowsay
     lavat
     cava
+    clashtui
 
     # --- GUI APPS ---
     pkgs-unstable.noctalia

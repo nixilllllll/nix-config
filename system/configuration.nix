@@ -2,28 +2,41 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, pkgs-unstable, ... }:
+{
+  config,
+  pkgs,
+  pkgs-unstable,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ../hardware-configuration.nix
-      ./boot.nix
-      ./hardware.nix
-      ./virtualisation.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ../hardware-configuration.nix
+    ./boot.nix
+    ./hardware.nix
+    ./virtualisation.nix
+    ./mihomo.nix
+  ];
 
-# --- NIX FEATURES ---
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  # --- NIX FEATURES ---
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   home-manager.backupFileExtension = "backup";
 
-# --- DISPLAY MANAGER ---
+  # --- DISPLAY MANAGER ---
   services.xserver.enable = true;
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
 
-  # Enable networking
+  # --- NETWORK ---
   networking.networkmanager.enable = true;
+
+  systemd.tmpfiles.rules = [
+    "d /var/lib/mihomo 0750 mihomo mihomo -"
+  ];
 
   # Set your time zone.
   time.timeZone = "Europe/Moscow";
@@ -43,33 +56,36 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-# --- COMMAND SHELL ---
+  # --- COMMAND SHELL ---
   programs.zsh.enable = true;
 
-# --- GRAPHICS ---
+  # --- GRAPHICS ---
 
   # Desktop Portals (WIP)
   xdg.portal = {
     enable = true;
-    extraPortals = [pkgs.kdePackages.xdg-desktop-portal-kde ];
+    extraPortals = [ pkgs.kdePackages.xdg-desktop-portal-kde ];
   };
 
   #
   programs.niri.enable = true;
   services.desktopManager.plasma6.enable = true;
 
-# --- USERS ---
+  # --- USERS ---
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users."xbscure" = {
     isNormalUser = true;
     description = "xbscure";
-    extraGroups = [ "networkmanager" "wheel"];
-    packages = with pkgs; [];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    packages = with pkgs; [ ];
     shell = pkgs.zsh;
   };
 
-# --- PACKAGES & APPS ---
+  # --- PACKAGES & APPS ---
 
   # Allow AppImage
   # programs.appimage.enable = true;
@@ -77,7 +93,7 @@
   # Unfree packages setting
   nixpkgs.config.allowUnfree = true;
 
-# --- FONTS ---
+  # --- FONTS ---
   fonts.fontDir.enable = true;
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono # mono font for code and terminal
@@ -87,10 +103,10 @@
   ];
 
   environment.systemPackages = with pkgs; [
-      git
-      curl
-      vim
-    ];
+    git
+    curl
+    vim
+  ];
   # List packages installed in system profile. To search, run:
   # $ nix search wget
 
