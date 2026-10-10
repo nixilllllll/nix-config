@@ -3,9 +3,7 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 {
-  config,
   pkgs,
-  pkgs-unstable,
   ...
 }:
 
@@ -16,7 +14,6 @@
     ./boot.nix
     ./hardware.nix
     ./virtualisation.nix
-    ./mihomo.nix
   ];
 
   # --- NIX FEATURES ---
