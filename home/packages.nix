@@ -26,7 +26,6 @@
     cowsay
     lavat
     cava
-    clashtui
 
     # --- GUI APPS ---
     pkgs-unstable.noctalia
@@ -37,8 +36,6 @@
     pkgs-unstable.spotify
 
     flclash
-    alacritty
-    ghostty
     xwayland-satellite
     fuzzel
     nautilus

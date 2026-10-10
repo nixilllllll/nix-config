@@ -1,10 +1,11 @@
-{ pkgs, pkgs-unstable, ... }:
+{ ... }:
 
 {
   imports = [
     ./packages.nix
     ./shell.nix
     ./dev.nix
+    ./shared/programs/gui.nix
   ];
 
   home.username = "xbscure";
