@@ -31,10 +31,6 @@
   # --- NETWORK ---
   networking.networkmanager.enable = true;
 
-  systemd.tmpfiles.rules = [
-    "d /var/lib/mihomo 0750 mihomo mihomo -"
-  ];
-
   # Set your time zone.
   time.timeZone = "Europe/Moscow";
 
