@@ -37,11 +37,13 @@
 
     flclash
     xwayland-satellite
-    fuzzel
+    walker
+    elephant
     nautilus
     zed-editor
     obsidian
     onlyoffice-desktopeditors
+    bitwig-studio
 
     # --- MISC ---
     bibata-cursors
