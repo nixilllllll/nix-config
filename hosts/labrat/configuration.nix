@@ -2,26 +2,19 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
-
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.grub = {
-    enable = true;
-    device = "nodev";
-    efiSupport = true;
-    efiInstallAsRemovable = true;
-  };
-
-  boot.loader.efi.canTouchEfiVariables = false;
-
-  # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./boot.nix
+  ];
 
   networking.hostName = "lab_rat"; # Define your hostname.
 
@@ -32,7 +25,10 @@
   time.timeZone = "Europe/Moscow";
 
   # Nix Features (manually added)
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   nixpkgs.config.allowUnfree = true;
 
   # Configure network proxy if necessary
@@ -50,11 +46,9 @@
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
 
-
   # Enable the GNOME Desktop Environment.
   # services.displayManager.gdm.enable = true;
   # services.desktopManager.gnome.enable = true;
-  
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
@@ -77,7 +71,10 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.xbscure = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+    ]; # Enable ‘sudo’ for the user.
   };
 
   # programs.firefox.enable = true;
@@ -132,4 +129,3 @@
   system.stateVersion = "26.05"; # Did you read the comment?
 
 }
-
