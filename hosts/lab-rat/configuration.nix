@@ -8,7 +8,7 @@
     ./boot.nix
     ../../modules/core.nix
     ../../modules/network.nix
-    ../../modules/graphics.nix
+    ../../modules/graphics/niri.nix
   ];
 
   # This value determines the NixOS release from which the default
