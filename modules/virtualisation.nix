@@ -1,10 +1,10 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
 
-  users.users.xbscure.extraGroups = [ "libvirtd" ];
+  users.groups.libvirtd.members = [ "xbscure" ];
 
   environment.sessionVariables = {
     LIBVIRT_DEFAULT_URI = "qemu:///system";

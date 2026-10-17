@@ -18,6 +18,8 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users."xbscure" = {
     isNormalUser = true;
+    home = "/home/xbscure";
+    group = "xbscure";
     description = "xbscure";
     extraGroups = [
       "networkmanager"
@@ -25,6 +27,8 @@
     ];
     shell = pkgs.zsh;
   };
+
+  users.groups.xbscure = { };
 
   # --- TIMEZONE and LOCALES ---
 
