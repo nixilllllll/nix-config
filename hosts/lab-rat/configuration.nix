@@ -9,6 +9,7 @@
     ../../modules/core.nix
     ../../modules/network.nix
     ../../modules/graphics/niri.nix
+    ../../modules/graphics/fonts.nix
   ];
 
   # This value determines the NixOS release from which the default
