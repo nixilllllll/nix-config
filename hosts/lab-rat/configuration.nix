@@ -1,4 +1,4 @@
-{ ... }:
+{ inputs, ... }:
 
 {
   networking.hostName = "lab-rat";
@@ -14,6 +14,7 @@
     ./boot.nix
     ../../modules/core.nix
     ../../modules/network.nix
+    ../../modules/proxy.nix
     ../../modules/graphics/niri.nix
     ../../modules/graphics/fonts.nix
   ];

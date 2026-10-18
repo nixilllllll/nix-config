@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    happ-nix.url = "github:DaHL-gh/happ-nix";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
@@ -26,7 +27,6 @@
         config.allowUnfree = true;
       };
 
-      # Общие настройки для всех хостов
       mkHost =
         hostName:
         nixpkgs.lib.nixosSystem {
@@ -35,6 +35,7 @@
           modules = [
             ./hosts/${hostName}/configuration.nix
             home-manager.nixosModules.home-manager
+            inputs.happ-nix.nixosModules.default
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
