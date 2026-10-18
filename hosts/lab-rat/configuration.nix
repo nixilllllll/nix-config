@@ -2,6 +2,7 @@
 
 {
   networking.hostName = "lab-rat";
+  networking.networkmanager.wifi.powersave = false;
 
   imports = [
     ./hardware-configuration.nix
