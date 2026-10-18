@@ -4,6 +4,11 @@
   networking.hostName = "lab-rat";
   networking.networkmanager.wifi.powersave = false;
 
+  nix.settings.trusted-users = [
+    "root"
+    "xbscure"
+  ];
+
   imports = [
     ./hardware-configuration.nix
     ./boot.nix
