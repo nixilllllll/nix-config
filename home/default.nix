@@ -9,6 +9,5 @@
   ];
 
   home.username = "xbscure";
-  home.homeDirectory = "/home/xbscure";
   home.stateVersion = "26.05";
 }
