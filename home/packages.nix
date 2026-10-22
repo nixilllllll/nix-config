@@ -29,18 +29,17 @@
 
     # --- GUI APPS ---
     pkgs-unstable.noctalia
-    pkgs-unstable.clash-verge-rev
     pkgs-unstable.firefox
     pkgs-unstable.chromium
     pkgs-unstable.telegram-desktop
     pkgs-unstable.spotify
+    pkgs-unstable.zed-editor
+    pkgs-unstable.vesktop
 
-    flclash
     xwayland-satellite
     walker
     elephant
     nautilus
-    zed-editor
     obsidian
     onlyoffice-desktopeditors
     bitwig-studio
