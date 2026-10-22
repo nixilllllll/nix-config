@@ -8,6 +8,7 @@
     ./boot.nix
     ./hardware.nix
     ../../modules/network.nix
+    ../../modules/proxy.nix
     ../../modules/core.nix
     ../../modules/virtualisation.nix
     ../../modules/graphics/fonts.nix
