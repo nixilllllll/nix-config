@@ -10,6 +10,11 @@
   nixpkgs.config.allowUnfree = true;
   home-manager.backupFileExtension = "backup";
 
+  programs.nh = {
+    enable = true;
+    flake = "/home/xbscure/.config/nixos";
+  };
+
   # --- USERS and SHELL ---
   programs.zsh.enable = true;
 
