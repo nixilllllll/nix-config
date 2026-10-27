@@ -9,26 +9,15 @@
     ruff
 
     # --- CLI TOOLS ---
-    ddcutil
-    brightnessctl
-    vim
-    neovim
-    helix
-    wget
-    curl
-    git
-    lazygit
-    zellij
     bat
+    btop
     eza
     fastfetch
-    btop
-    cowsay
-    lavat
-    cava
+    helix
+    lazygit
+    zellij
 
     # --- GUI APPS ---
-    pkgs-unstable.noctalia
     pkgs-unstable.firefox
     pkgs-unstable.chromium
     pkgs-unstable.telegram-desktop
@@ -36,13 +25,8 @@
     pkgs-unstable.zed-editor
     pkgs-unstable.vesktop
 
-    xwayland-satellite
-    walker
-    elephant
-    nautilus
     obsidian
     onlyoffice-desktopeditors
-    bitwig-studio
 
     # --- MISC ---
     bibata-cursors

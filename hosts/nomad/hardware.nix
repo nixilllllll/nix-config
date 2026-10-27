@@ -1,9 +1,7 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   # --- POWER MANAGEMENT ---
-  services.power-profiles-daemon.enable = true;
-  services.upower.enable = true;
   services.asusd.enable = true;
   services.supergfxd.enable = true;
 
@@ -35,15 +33,4 @@
           nvidiaBusId = "PCI:1:0:0";
         };
       };
-
-  # --- SOUND  ---
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
-
-  # --- BLUETOOTH ---
-  hardware.bluetooth.enable = true;
 }
