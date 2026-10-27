@@ -26,7 +26,7 @@
     pkgs-unstable.vesktop
 
     obsidian
-    onlyoffice-desktopeditors    
+    onlyoffice-desktopeditors
 
     # --- MISC ---
     bibata-cursors
