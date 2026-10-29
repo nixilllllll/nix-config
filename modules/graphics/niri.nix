@@ -17,6 +17,19 @@
   services.upower.enable = true;
   services.power-profiles-daemon.enable = true;
 
+  services.greetd = {
+    enable = true;
+    useTextGreeter = true;
+
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd}/bin/agreety --cmd niri-session";
+        user = "greeter";
+      };
+    }
+    ;
+  };
+
   programs.niri = {
     enable = true;
     useNautilus = true;
