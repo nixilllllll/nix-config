@@ -11,9 +11,10 @@
     ../../modules/proxy.nix
     ../../modules/core.nix
     ../../modules/virtualisation.nix
+    ../../modules/hardware/razer.nix
     ../../modules/graphics/fonts.nix
     ../../modules/graphics/niri.nix
-    ../../modules/graphics/plasma.nix
+#    ../../modules/graphics/plasma.nix
   ];
 
   # This value determines the NixOS release from which the default
