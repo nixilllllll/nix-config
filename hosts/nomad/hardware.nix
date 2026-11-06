@@ -1,15 +1,14 @@
 { ... }:
 
 {
-  # --- POWER MANAGEMENT ---
   services.asusd.enable = true;
+  systemd.services.asusd.serviceConfig.ConfigurationDirectory = "asusd";
   services.supergfxd.enable = true;
 
   services.udev.extraRules = ''
     SUBSYSTEM=="power_supply", KERNEL=="BAT1", ATTR{charge_control_end_threshold}="80"
   '';
 
-  # --- GRAPHICS ---
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
