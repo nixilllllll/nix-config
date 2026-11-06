@@ -11,7 +11,7 @@
     # --- CLI TOOLS ---
     bat
     ripgrep
-    btop
+    btop-cuda
     eza
     fastfetch
     helix
