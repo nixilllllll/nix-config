@@ -10,6 +10,7 @@
 
     # --- CLI TOOLS ---
     bat
+    ripgrep
     btop
     eza
     fastfetch
